@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            perspective: 1000px;
+            animation: back 9s forwards 1;
+        }
+
+        div{
+            width: 500px;
+            height: 500px;
+            background-color: coral;
+            font-size: 50px;
+            display: flex;
+            color:coral;
+            justify-content: center;
+            align-items: center;
+            animation: sample1 9s 1 forwards;
+        }
+        @keyframes sample1 {
+            0%{
+                transform: rotateY(0) translate(0);
+            }
+            33%{
+                transform: rotateY(2turn) translate(-500px, -100px);
+            }
+            66%{
+                transform: translate(500px, -100px);
+                border-radius: 100px;
+                font-size: 60px;
+                font-family: unset;
+                color: bisque;
+                background-color: bisque;
+            }
+            100%{
+                transform: translate(0);
+                border-radius: 250px;
+                border: 5px solid black;
+                color: black;
+                font-size: 120px;
+                background-color: bisque;
+                font-family: 'Hurricane', cursive;
+            }
+        }
+
+        @keyframes back {
+            0%{
+                background: white;
+            }
+            50%{
+                background:  url("/image/liu.jpeg");
+                background-position: center center;
+                background-size:cover ;
+            }
+            100%{
+                background: url('/image/liu.jpeg');
+                background-position: center center;
+                background-size: cover;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>Lorem ipsum</div>
+</body>
+</html>
